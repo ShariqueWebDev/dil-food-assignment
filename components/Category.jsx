@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "./Wrapper";
 import Image from "next/image";
-import { categoriesImgs } from "@/data/category";
+import { categoriesImgs} from "@/data/category";
 
 const Category = () => {
   return (

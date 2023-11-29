@@ -33,7 +33,7 @@ const Header = () => {
     >
       <Wrapper className={`h-[60px] flex justify-between items-center`}>
         <Link href={"/"}>
-            <h1 className="text-[30px] font-bold max-md:text-[25px]">{"Wal-cart"}</h1>
+            <h1 className="text-[30px] font-bold max-md:text-[25px]">{"Wal-Cart"}</h1>
         </Link>
 
         <div className="flex">  
@@ -54,7 +54,7 @@ const Header = () => {
             </div>
           </div>
           <div className="cursor-pointer flex justify-center items-center relative ">
-            <Link href={"/cart"}>
+            <Link href={"/cart/cart"}>
               <BsCart className="" size={18} />
             </Link>
               <div className="absolute text-xs bottom-[12px] left-[10px] bg-red-600 w-5  rounded-full text-center">
