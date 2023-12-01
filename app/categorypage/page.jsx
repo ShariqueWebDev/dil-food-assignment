@@ -1,11 +1,10 @@
-import Link from 'next/link'
 import React from 'react'
+import CategoriesPage from './[catId]/page'
 
 const page = () => {
   return (
     <div>
-      about page
-      <Link href={'/about/1'}>dynamic</Link>
+      <CategoriesPage/>
     </div>
   )
 }

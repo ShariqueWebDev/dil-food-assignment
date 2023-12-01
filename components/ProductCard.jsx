@@ -6,10 +6,10 @@ import { getDiscountPercentage } from '@/utils/formulas'
 import { Context } from '@/utils/contextApi'
 
 const ProductCard = ({data}) => {
-  
   return (
     <div className="p-3 m-2 w-[340px] max-[]: shadow-sm">
-      <Link href={`/products-details/${data.id - 1}`}>
+      
+      <Link href={`/products-details/${data?.id - 1}`}>
         <div className="product_img">
           <Image width={500} height={500} src={data?.img} alt={""} />
         </div>

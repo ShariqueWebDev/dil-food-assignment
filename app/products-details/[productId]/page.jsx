@@ -1,10 +1,8 @@
 "use client";
 import React, { useContext, useState } from "react";
 import { products } from "@/data/products";
-// import { useRouter } from "next/router";
 import "./singleProduct.scss";
 import "@/app/globals.css"
-import Header from "@/components/Header";
 
 import {
   FaFacebookF,
@@ -14,8 +12,8 @@ import {
   FaCartPlus,
   FaPinterest,
 } from "react-icons/fa";
-console.log(products);
 import { Context } from "@/utils/contextApi";
+import RelatedProducts from "@/components/RelatedProducts";
 
 const ProductDetails = ({params}) => {
 
@@ -42,11 +40,10 @@ const ProductDetails = ({params}) => {
     })
   }
 
-  // console.log(obj);
+  // console.log(filterByCategory);
 
   return (
     <>
-      <Header/>
     <div className="single-product-main-content">
         <div className="single-product-page">
           <div className=" layout">
@@ -90,7 +87,7 @@ const ProductDetails = ({params}) => {
           </div>
         </div>
         <div className="related-product-container">
-          {/* <RelatedProducts  />         */}
+          <RelatedProducts categoryId={products?.[slug]?.category} categorySlug={products?.[slug]?.id} products={products} heading={"Related Products"} />        
         </div>
     
     </div>

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+"use client";
+import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,10 +7,12 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { BsCart } from "react-icons/bs";
 
 import Wrapper from "./Wrapper";
+import { Context } from "@/utils/contextApi";
 
 const Header = () => {
   const [show, setShow] = useState("translate-y-0");
   const [lastScrollY, setLastScrollY] = useState(0);
+  const {cartItems} = useContext(Context);
 
   const handleScrollbar = () => {
     if (window.scrollY > 500 && window.scrollY > lastScrollY) {
@@ -32,7 +35,7 @@ const Header = () => {
       className={`w-full h-[60px] md:[80px] bg-white shadow-md text-red-600 flex justify-center items-center z-20 sticky top-0 transition-transform duration-300  ${show} `}
     >
       <Wrapper className={`h-[60px] flex justify-between items-center`}>
-        <Link href={"/"}>
+        <Link href="/">
             <h1 className="text-[30px] font-bold max-md:text-[25px]">{"Wal-Cart"}</h1>
         </Link>
 
@@ -57,9 +60,9 @@ const Header = () => {
             <Link href={"/cart/cart"}>
               <BsCart className="" size={18} />
             </Link>
-              <div className="absolute text-xs bottom-[12px] left-[10px] bg-red-600 w-5  rounded-full text-center">
-                {10}
-              </div>
+              {cartItems.length > 0 && <div className="absolute text-xs bottom-[12px] left-[10px] bg-red-600 w-5  rounded-full text-center">
+                {cartItems?.length}
+              </div>}
             
           </div>
         </div>
