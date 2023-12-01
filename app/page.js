@@ -5,7 +5,7 @@ import HomeSection from "@/components/HomeSection";
 export default function Home() {
   return (
     
-      <div className="h-[3000px] ">
+      <div className="">
         <HomeSection />
       </div>
     

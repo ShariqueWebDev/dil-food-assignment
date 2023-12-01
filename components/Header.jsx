@@ -1,6 +1,5 @@
 "use client";
 import { useContext, useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 import { IoMdHeartEmpty } from "react-icons/io";
@@ -41,7 +40,7 @@ const Header = () => {
 
         <div className="flex">  
             <ul className="flex gap-10 font-medium max-md:hidden">
-                <li className="cursor-pointer">Home</li>
+                <Link href="/"><li className="cursor-pointer">Home</li></Link>
                 <li className="cursor-pointer">About</li>
                 <li className="cursor-pointer">Contact</li>
             </ul>

@@ -1,9 +1,6 @@
-import React, { useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getDiscountPercentage } from '@/utils/formulas'
-
-import { Context } from '@/utils/contextApi'
 
 const ProductCard = ({data}) => {
   return (

@@ -22,7 +22,7 @@ const RelatedProducts = ({ categoryId, categorySlug, products, heading }) => {
         </div>
         <div className="flex flex-wrap mx-auto mt-[20px]">
           {filterById?.slice?.(0, 3)?.map((item) => {
-            return <ProductCard data={item} />;
+            return <ProductCard data={item} key={item?.id} />;
           })}
         </div>
       </div>
