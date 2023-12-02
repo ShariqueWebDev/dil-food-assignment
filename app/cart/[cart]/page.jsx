@@ -5,7 +5,6 @@ import Wrapper from "@/components/Wrapper";
 import { Context } from "@/utils/contextApi";
 import { useContext } from "react";
 
-
 const Cart = () => {
 
     const {cartItems, productRemoveHandler, total} = useContext(Context)
@@ -18,13 +17,13 @@ const Cart = () => {
       </h1>
       <Wrapper>
         <>
-         {cartItems.length >= 1 && <div className="cart_container flex justify-between max-lg:flex-col relative">
+         {cartItems?.length >= 1 && <div className="cart_container flex justify-between max-lg:flex-col relative">
             {/* CART ITEMS */}
             <div className="left flex-1 mr-6 max-md:mr-0 h-[400px] overflow-auto  ">
               <div className="font-semibold mb-4 max-md:text-center text-[20px] max-md:text-[18px]">
                 Cart Items
               </div>
-              {cartItems.map((item)=>{
+              {cartItems?.map((item)=>{
                 return(
                     <CartItem data={item} productRemoveHandler={productRemoveHandler}/>
                 )
@@ -46,7 +45,7 @@ const Cart = () => {
                   include delivery costs and international costs fee.
                 </div>
                 <Link href={"/checkout"}>
-                  <button className="w-full cursor-pointer bg-black text-white p-3 mt-6 flex justify-center items-center rounded-full bg-red-600 font-semibold">
+                  <button className="w-full cursor-pointer text-white p-3 mt-6 flex justify-center items-center rounded-full bg-red-600 font-semibold">
                     Checkout
                   </button>
                 </Link>
@@ -56,7 +55,7 @@ const Cart = () => {
         </>
 
         {/* THIS IS EMPTY SCREEN COMPONENT */}
-          {cartItems.length <= 0 && <div className="empty mx-auto flex flex-col justify-center items-center">
+          {cartItems?.length <= 0 && <div className="empty mx-auto flex flex-col justify-center items-center">
             <div className="w-[400px] h-[400px] max-sm:w-[250px] max-sm:h-[250px]">
               <img src="/empty-cart.jpg" alt="" />
             </div>

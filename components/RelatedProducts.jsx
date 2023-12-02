@@ -7,6 +7,7 @@ const RelatedProducts = ({ categoryId, categorySlug, products, heading }) => {
   const relatedProducts = products?.filter(
     (item) => item?.category === categoryId
   );
+  
   const filterById = relatedProducts?.filter(
     (item) => item?.id !== categorySlug
   );

@@ -5,17 +5,22 @@ import { Context } from "@/utils/contextApi";
 import "@/app/globals.css";
 
 const CategoriesPage = ({ params }) => {
+
+  const capitalizedWord = (word) =>{
+    let changeWord = word.toLowerCase();
+    let newWord = changeWord.charAt(0).toUpperCase() + changeWord.slice(1)
+    return newWord
+  }
+
   let slug = params.catId;
 
   const { filterByCategory } = useContext(Context);
-  const heading = filterByCategory?.map((head) => head?.category);
-  // console.log(slug);
 
   return (
     <>
     <div className="max-w-[1200px] mx-auto mt-[100px]">
       
-      <h1 className="text-[35px] font-semibold ">{slug}</h1>
+      <h1 className="text-[35px] font-semibold ">{capitalizedWord(slug)}</h1>
       <div className="flex justify-center flex-wrap">
         {filterByCategory?.map((item) => {
           return <ProductCard data={item} key={item?.id} />;

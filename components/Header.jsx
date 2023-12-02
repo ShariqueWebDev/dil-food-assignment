@@ -59,7 +59,7 @@ const Header = () => {
             <Link href={"/cart/cart"}>
               <BsCart className="" size={18} />
             </Link>
-              {cartItems.length > 0 && <div className="absolute text-xs bottom-[12px] left-[10px] bg-red-600 w-5  rounded-full text-center">
+              {cartItems?.length > 0 && <div className="absolute text-xs bottom-[12px] left-[10px] bg-red-600 w-5  rounded-full text-center">
                 {cartItems?.length}
               </div>}
             

@@ -24,10 +24,10 @@ const SuccessPage = () => {
   return (
     <>
       {!!loading ? <div className="h-[300px] text-[25px] mt-[200px] text-center font-bold">Loading...</div>: <div className="flex border justify-center items-center h-screen ">
-      <div className='max-w-[600px] rounded-lg border mx-[10px] my-[100px] p-[10px] text-center bg-red-200 '>
+      <div className='max-w-[600px] rounded-lg border mx-[10px] my-[100px] p-[10px] text-center bg-red-600 '>
           {res?.map((item)=>{
               return(
-                  <div key={item.id}>
+                  <div key={item?.id}>
                       <p className='text-[30px] font-semibold'> Hi {item?.fname} Your order has been placed</p>
                       <div className="mt-[15px] flex justify-center text-white">
                           <BsCheckCircle size={50}/>

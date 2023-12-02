@@ -29,15 +29,15 @@ const BannerSection = () => {
         </div>
       )}
     >
-      {imgData.map((data) => {
+      {imgData?.map((data) => {
         return (
-          <div className="max-w-[600px] mx-auto" key={data.id}>
+          <div className="max-w-[600px] mx-auto" key={data?.id}>
             <img
-              src={data.img}
+              src={data?.img}
               className="w-full "
             />
             <div className=" w-full max-w-[150px] absolute cursor-pointer bottom-10 left-0 bg-red-500 text-white h-[50px] flex justify-center items-center uppercase font-bold sm:max-w-[120px] sm:h-[45px] sm:text-[12px] max-md:max-w-[80px] max-md:text-[10px] max-md:h-[35px] ">
-              {data.ShopBtn}
+              {data?.ShopBtn}
             </div>
           </div>
         );

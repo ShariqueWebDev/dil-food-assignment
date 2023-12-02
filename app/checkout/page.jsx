@@ -90,7 +90,7 @@ const CheckoutPage = () => {
               </div>
           </div>
           <div className="text-center flex justify-center rounded-md" >
-            <button className="rounded-md bg-red-600 p-1" disabled={userInfo.fname.length<5 || userInfo.lname.length<5 || userInfo.street<5} onClick={addUserHandler}>Place your order</button>
+            <button className="rounded-md bg-red-600 p-1" disabled={userInfo.fname.length<5 || userInfo.lname.length<5 || userInfo.street.length < 5 || userInfo.creditCard.length < 8} onClick={addUserHandler}>Place your order</button>
           </div>
         </form>
       </div>
